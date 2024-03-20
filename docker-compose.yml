@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  duo-bypass-daemon:
+    image: duo-telegram-bot:latest
+    env_file:
+      - .env
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
+    command: ["python", "duo-bypass-daemon.py"]
