@@ -17,7 +17,7 @@ from urllib.parse import urlparse, parse_qs
 #args = parser.parse_args()
 
 # Load or initialize configuration
-config_file = '.duo-telegram-bot.json'
+config_file = '/app/data/.duo-telegram-bot.json'
 
 token = os.getenv('TOKEN')
 otpauth = os.getenv('OTPAUTH')

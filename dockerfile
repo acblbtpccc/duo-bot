@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY duo-bypass-daemon.py .
 
 # Command to run on container start
-CMD [ "python", "duo-bypass-daemon.py" ]
+CMD [ "python", "/app/duo-bypass-daemon.py" ]

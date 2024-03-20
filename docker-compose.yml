@@ -6,6 +6,10 @@ services:
     env_file:
       - .env
     volumes:
-      - ./config:/app/config
+      - duo-bypass-data:/app/data
     restart: unless-stopped
-    command: ["python", "duo-bypass-daemon.py"]
+    command: ["python", "/app/duo-bypass-daemon.py"]
+
+volumes:
+  duo-bypass-data:
+    driver: local
